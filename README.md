@@ -1,4 +1,4 @@
-# Vagrant::Cssh
+# Vagrant-cssh
 
 TODO: Write a gem description
 

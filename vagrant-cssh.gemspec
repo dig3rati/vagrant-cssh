@@ -1,16 +1,18 @@
 # coding: utf-8
+require 'base64'
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'vagrant/cssh/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "vagrant-cssh"
-  spec.version       = Vagrant::Cssh::VERSION
+  spec.version       = VagrantPlugins::Cssh::VERSION
+  spec.platform      = Gem::Platform::RUBY
   spec.authors       = ["Bhaskar Nidumukalla"]
-  spec.email         = ["bhaskar@denaglobal.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.email         = ["bWVAYmhhc2thci51cw==\n"].map { |e| Base64.decode64(e) }
+  spec.description   = %q{Vagrant cSSH is a clustered ssh utility}
+  spec.summary       = %q{Vagrant cSSH is a clustered ssh utility for running commands on multiple vagrant guests}
+  spec.homepage      = "https://github.com/dig3rati/vagrant-cssh/wiki"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -20,4 +22,8 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
+
+  spec.post_install_message = <<USAGE
+
+USAGE
 end
