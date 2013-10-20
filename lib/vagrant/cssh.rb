@@ -1,7 +1,6 @@
-require "vagrant/cssh/version"
+require 'vagrant'
 
-module VagrantPlugins
-  module Cssh
-    # Your code goes here...
-  end
-end
+require 'vagrant/cssh/version'
+require 'vagrant/cssh/plugin'
+
+VAGRANT_VERSION = 2
