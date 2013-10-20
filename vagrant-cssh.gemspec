@@ -2,7 +2,7 @@
 require 'base64'
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'vagrant/cssh/version'
+require 'vagrant-cssh/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "vagrant-cssh"
@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
 
-  spec.post_install_message = <<USAGE
-
+  spec.post_install_message = <<-USAGE
+Vagrant cSSH is a SSH utility to run commands on multiple guests
 USAGE
 end
