@@ -1,6 +1,6 @@
 module VagrantPlugins
   module Cssh
-    class Config < Vagrant.plugin(::VAGRANT_VERSION, :config)
+    class Config < Vagrant.plugin(VAGRANT_VERSION, :config)
       attr_reader :env
       attr_accessor :login
 

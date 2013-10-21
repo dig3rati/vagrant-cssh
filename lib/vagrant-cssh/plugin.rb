@@ -1,6 +1,6 @@
 module VagrantPlugins
   module Cssh
-    class Plugin < Vagrant.plugin(::VAGRANT_VERSION)
+    class Plugin < Vagrant.plugin(VAGRANT_VERSION)
       name "Vagrant cSSH"
       description "Plugin will allow you to execute commands on multiple vagrant guests"
 

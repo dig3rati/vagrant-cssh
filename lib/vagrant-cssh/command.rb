@@ -1,6 +1,6 @@
 module VagrantPlugins
   module Cssh
-    class Command < Vagrant.plugin(::VAGRANT_VERSION, :command)
+    class Command < Vagrant.plugin(VAGRANT_VERSION, :command)
       def execute
         cmd, cmd_args = parse_args
         puts "Hello World!"
